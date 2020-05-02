@@ -1,0 +1,855 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+
+    background-color: #f9f9f9;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.429;
+    color: black;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+
+
+.compare {
+    padding: 70px 0 40px;
+}
+
+.compare-title h2 {
+    text-align: center;
+    font-weight: 700;
+    line-height: 44px;
+    font-size: 30px;
+    color: #272727;
+    padding-bottom: 30px;
+}
+
+.compare-range {
+    width: 1115px;
+    height: 175px;
+    background: #6b94ff
+}
+
+.compare-range__levelm {
+    display: none;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .6);
+    max-width: 100px
+}
+
+.compare-range__level {
+    display: block;
+    padding: 30px 22px 0
+}
+
+.compare-range__level div {
+    display: inline-block;
+    float: left;
+    font-weight: 600;
+    line-height: 19px;
+    font-size: 13px;
+    color: #fff
+}
+
+.compare-range__level .level {
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 12px;
+    opacity: .6
+}
+
+.compare-range__level .beginner {
+    padding-left: 64px
+}
+
+
+
+.compare-range__level .beginner_two {
+    padding-left: 51px
+}
+
+.compare-range__level .elementary {
+    padding-left: 94px
+}
+
+.compare-range__level .pre {
+    padding-left: 72px
+}
+
+.compare-range__level .intermediate {
+    padding-left: 64px
+}
+
+.compare-range__level .upper {
+    padding-left: 63px
+}
+
+.compare-range__level .advanced {
+    padding-left: 58px
+}
+
+.change_range {
+    cursor: pointer;
+}
+
+@-moz-document url-prefix() {
+    .compare-range__level .beginner {
+        padding-left: 62px
+    }
+
+    .compare-range__level .beginner_two {
+        padding-left: 47px
+    }
+
+    .compare-range__level .intermediate {
+        padding-left: 67px
+    }
+
+    .compare-range__level .advanced {
+        padding-left: 65px
+    }
+}
+
+.compare-range input[type=range].range {
+    position: relative;
+    -webkit-appearance: none;
+    width: 800px;
+    margin-left: 200px
+}
+
+.compare-range input[type=range].range:focus {
+    outline: 0
+}
+
+.compare-range input[type=range].range::-webkit-slider-runnable-track {
+    z-index: 5;
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 0 transparent, 0 0 0 rgba(13, 13, 13, 0);
+    box-shadow: 0 0 0 transparent, 0 0 0 rgba(13, 13, 13, 0);
+    background: #fff;
+    border-radius: 25px;
+    border: 0 solid rgba(0, 0, 1, 0)
+}
+
+.compare-range input[type=range].range::-webkit-slider-thumb {
+    -webkit-box-shadow: .4px .4px .15px rgba(0, 0, 0, .4), 0 0 .4px rgba(13, 13, 13, .4);
+    box-shadow: .4px .4px .15px rgba(0, 0, 0, .4), 0 0 .4px rgba(13, 13, 13, .4);
+    border: 5px solid #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    background: #f7b739;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7.5px;
+    position: relative
+}
+
+.compare-range input[type=range].range:focus::-webkit-slider-runnable-track {
+    background: #fff
+}
+
+.compare-range input[type=range].range::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    box-shadow: 0 0 0 transparent, 0 0 0 rgba(13, 13, 13, 0);
+    background: #fff;
+    border-radius: 25px;
+    border: 0 solid rgba(0, 0, 1, 0)
+}
+
+.compare-range input[type=range].range::-moz-range-thumb {
+    box-shadow: .4px .4px .15px rgba(0, 0, 0, .4), 0 0 .4px rgba(13, 13, 13, .4);
+    border: 5px solid #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    background: #f7b739;
+    cursor: pointer
+}
+
+.compare-range input[type=range].range::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: 0 0;
+    border-color: transparent;
+    color: transparent
+}
+
+.compare-range input[type=range].range::-ms-fill-lower,
+.compare-range input[type=range].range::-ms-fill-upper {
+    background: #fff;
+    border: 0 solid rgba(0, 0, 1, 0);
+    border-radius: 50px;
+    box-shadow: 0 0 0 transparent, 0 0 0 rgba(13, 13, 13, 0)
+}
+
+.compare-range input[type=range].range::-ms-thumb {
+    box-shadow: .4px .4px .15px rgba(0, 0, 0, .4), 0 0 .4px rgba(13, 13, 13, .4);
+    border: 5px solid #fff;
+    width: 20px;
+    border-radius: 50px;
+    background: #f7b739;
+    cursor: pointer;
+    height: 5px
+}
+
+.compare-range input[type=range].range:focus::-ms-fill-lower,
+.compare-range input[type=range].range:focus::-ms-fill-upper {
+    background: #fff
+}
+
+.compare-range input[type=range].range:before {
+    content: "";
+    width: 1060px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    left: -175px;
+    top: -1px;
+    border-radius: 35px
+}
+
+.compare-result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 30px auto;
+}
+
+.compare-result__title h3 {
+    font-weight: 700;
+    line-height: 29px;
+    font-size: 20px;
+    color: #272727
+}
+
+.compare-result__other {
+    margin-left: 100px
+}
+
+.compare-result__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.compare-result__money {
+    margin-left: 40px
+}
+
+.compare-result__big {
+    font-weight: 700;
+    line-height: 29px;
+    font-size: 20px
+}
+
+.compare-result__small {
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 12px;
+    color: #9f9f9f
+}
+
+
+
+@media (max-width: 991.98px) {
+
+
+    .compare-range {
+        width: 100%;
+        height: 210px
+    }
+
+    .compare-range__level .level {
+        display: block;
+        float: none;
+        margin-bottom: 5px
+    }
+
+    .compare-range__level .beginner,
+    .compare-range__level .beginner_two {
+        padding-left: 0
+    }
+
+    .compare-range__level .elementary {
+        padding-left: 40px
+    }
+
+    .compare-range__level .pre {
+        padding-left: 27px
+    }
+
+    .compare-range__level .intermediate {
+        padding-left: 10px
+    }
+
+    .compare-range__level .upper {
+        padding-left: 14px
+    }
+
+    .compare-range__level .advanced {
+        padding-left: 11px
+    }
+
+    .compare-range input[type=range].range {
+        margin-left: 40px;
+        width: 605px
+    }
+
+    .compare-range input[type=range].range:before {
+        left: -35px;
+        width: 680px
+    }
+
+
+}
+
+@media (max-width: 767.98px) {
+
+    .compare .title {
+        padding-left: 23px
+    }
+
+    .compare .container {
+        max-width: 100%;
+        padding: 0
+    }
+
+    .compare-range {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 340px;
+        width: 100vw;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+
+    .compare-range>div {
+        position: relative
+    }
+
+    .compare-range__levelm {
+        display: block;
+        padding-left: 38px;
+        padding-top: 28px
+    }
+
+    .compare-range__level {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        padding: 30px 15px
+    }
+
+    .compare-range__level .level {
+        display: none
+    }
+
+    .compare-range__level div {
+        padding-left: 30px !important;
+        font-weight: 600;
+        line-height: 15px
+    }
+
+    .compare-range__level .beginner,
+    .compare-range__level .beginner_two,
+    .compare-range__level .elementary,
+    .compare-range__level .intermediate,
+    .compare-range__level .pre,
+    .compare-range__level .upper {
+        padding-top: 21px
+    }
+
+    .compare-range__level .advanced {
+        padding-top: 17px
+    }
+
+    .compare-range input[type=range].range {
+        position: absolute;
+        top: 200px;
+        left: -110px;
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+        width: 200px;
+        height: 4px
+    }
+
+    .compare-range input[type=range].range:before {
+        left: -6px;
+        width: 215px;
+        top: 0
+    }
+
+    .compare-result {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 20px
+    }
+
+    .compare-result__info {
+        display: block
+    }
+
+    .compare-result__money {
+        padding-top: 17px;
+        margin-left: 0
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .compare {
+        padding-bottom: 0;
+        margin-bottom: 0
+    }
+
+    .compare-title {
+        padding: 0 22px
+    }
+
+    .compare-title h2 {
+        line-height: 32px;
+        font-size: 22px
+    }
+
+    .compare-range__level div {
+        font-size: 10px
+    }
+
+    .compare-result {
+        -ms-flex-pack: distribute;
+        justify-content: space-around
+    }
+
+    .compare-result__other {
+        margin-left: 0
+    }
+
+    .compare-result__title h3 {
+        line-height: 20px;
+        font-size: 14px
+    }
+
+    .compare-result__big {
+        line-height: 23px;
+        font-size: 16px
+    }
+
+    .compare-result__small {
+        line-height: 16px;
+        font-size: 11px
+    }
+
+}
+
+@media screen and (-ms-high-contrast:active),
+(-ms-high-contrast:none) {
+    .compare-range {
+        height: 225px
+    }
+}
+
+@media (max-width:991px) and (-ms-high-contrast:active),
+(-ms-high-contrast:none) {
+    .compare-range {
+        height: 300px
+    }
+
+    .compare-range__level div {
+        font-size: 12px
+    }
+
+    .compare-range__level .beginner,
+    .compare-range__level .beginner_two {
+        padding-left: 7px
+    }
+
+    .compare-range__level .elementary {
+        padding-left: 50px
+    }
+
+    .compare-range__level .pre {
+        padding-left: 27px
+    }
+
+    .compare-range__level .intermediate {
+        padding-left: 17px
+    }
+
+    .compare-range__level .upper {
+        padding-left: 14px
+    }
+
+    .compare-range__level .advanced {
+        padding-left: 22px
+    }
+}
+
+@media (max-width:767px) and (-ms-high-contrast:active),
+(-ms-high-contrast:none) {
+    .compare {
+        display: none
+    }
+}
+
+@-moz-document url-prefix() {
+    .compare-range input[type=range].range {
+        width: 823px;
+        margin-left: 192px;
+        height: 6px;
+    }
+}
+
+@media (max-width:1199px) {
+
+    .compare-range {
+        width: 100%
+    }
+
+    .compare-range__level .beginner {
+        padding-left: 48px
+    }
+
+    .compare-range__level .beginner_two {
+        padding-left: 36px
+    }
+
+    .compare-range__level .elementary {
+        padding-left: 56px
+    }
+
+    .compare-range__level .pre {
+        padding-left: 44px
+    }
+
+    .compare-range__level .intermediate {
+        padding-left: 28px
+    }
+
+    .compare-range__level .upper {
+        padding-left: 32px
+    }
+
+    .compare-range__level .advanced {
+        padding-left: 30px
+    }
+
+    .compare-range input[type=range].range {
+        margin-left: 178px;
+        width: 645px
+    }
+
+    .compare-range input[type=range].range:before {
+        left: -156px;
+        width: 860px
+    }
+
+    @-moz-document url-prefix() {
+        .compare-range input[type=range].range {
+            width: 690px
+        }
+
+        .compare-range__level div {
+            font-size: 12px
+        }
+
+        .compare-range__level .beginner {
+            padding-left: 47px
+        }
+
+        .compare-range__level .beginner_two {
+            padding-left: 34px
+        }
+
+        .compare-range__level .elementary {
+            padding-left: 73px
+        }
+
+        .compare-range__level .pre {
+            padding-left: 46px
+        }
+
+        .compare-range__level .intermediate {
+            padding-left: 50px
+        }
+
+        .compare-range__level .upper {
+            padding-left: 40px
+        }
+
+        .compare-range__level .advanced {
+            padding-left: 49px
+        }
+    }
+}
+
+@media (max-width:991px) {
+
+    .compare-range {
+        width: 100%;
+        height: 210px
+    }
+
+    .compare-range__level .level {
+        display: block;
+        float: none;
+        margin-bottom: 5px
+    }
+
+    .compare-range__level .beginner,
+    .compare-range__level .beginner_two {
+        padding-left: 0
+    }
+
+    .compare-range__level .elementary {
+        padding-left: 55px
+    }
+
+    .compare-range__level .pre {
+        padding-left: 32px
+    }
+
+    .compare-range__level .intermediate {
+        padding-left: 27px
+    }
+
+    .compare-range__level .upper {
+        padding-left: 22px
+    }
+
+    .compare-range__level .advanced {
+        padding-left: 20px
+    }
+
+    .compare-range input[type=range].range {
+        margin-left: 40px;
+        width: 605px
+    }
+
+    .compare-range input[type=range].range:before {
+        left: -35px;
+        width: 680px
+    }
+
+    @-moz-document url-prefix() {
+        .compare-range input[type=range].range {
+            margin-left: 35px;
+            width: 620px
+        }
+
+        .compare-range__level div {
+            font-size: 12px
+        }
+
+        .compare-range__level .beginner,
+        .compare-range__level .beginner_two {
+            padding-left: 0
+        }
+
+        .compare-range__level .elementary {
+            padding-left: 60px
+        }
+
+        .compare-range__level .pre {
+            padding-left: 35px
+        }
+
+        .compare-range__level .intermediate {
+            padding-left: 35px
+        }
+
+        .compare-range__level .upper {
+            padding-left: 28px
+        }
+
+        .compare-range__level .advanced {
+            padding-left: 32px
+        }
+    }
+}
+
+@media (max-width:767px) {
+
+    .compare .title {
+        padding-left: 23px
+    }
+
+    .compare .container {
+        max-width: 100%;
+        padding: 0
+    }
+
+    .compare-range {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 340px;
+        width: 100vw;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+
+    .compare-range>div {
+        position: relative
+    }
+
+    .compare-range__levelm {
+        display: block;
+        padding-left: 38px;
+        padding-top: 28px
+    }
+
+    .compare-range__level {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        padding: 30px 15px
+    }
+
+    .compare-range__level .level {
+        display: none
+    }
+
+    .compare-range__level div {
+        padding-left: 30px !important;
+        font-weight: 600;
+        line-height: 15px
+    }
+
+    .compare-range__level .beginner,
+    .compare-range__level .beginner_two,
+    .compare-range__level .elementary,
+    .compare-range__level .intermediate,
+    .compare-range__level .pre,
+    .compare-range__level .upper {
+        padding-top: 21px
+    }
+
+    .compare-range__level .advanced {
+        padding-top: 17px
+    }
+
+    .compare-range input[type=range].range {
+        position: absolute;
+        top: 207px;
+        left: -110px;
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+        width: 200px;
+        height: 4px
+    }
+
+    .compare-range input[type=range].range:before {
+        left: -8px;
+        width: 215px;
+        top: -1px
+    }
+
+    .compare-result {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 20px
+    }
+
+    .compare-result__info {
+        display: block
+    }
+
+    .compare-result__money {
+        padding-top: 17px;
+        margin-left: 0
+    }
+
+    @-moz-document url-prefix() {
+        .compare-range input[type=range].range {
+            margin-left: 35px;
+            width: 215px;
+            top: 210px;
+            left: -120px
+        }
+
+        .compare-range__level div {
+            font-size: 12px
+        }
+
+        .compare-range__level .beginner,
+        .compare-range__level .beginner_two,
+        .compare-range__level .elementary,
+        .compare-range__level .intermediate,
+        .compare-range__level .pre,
+        .compare-range__level .upper {
+            padding-top: 23px
+        }
+
+        .compare-range__level .advanced {
+            padding-top: 13px
+        }
+    }
+}

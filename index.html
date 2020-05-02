@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Range</title>
+    <meta name="author" content="Leskin Maksim">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <article class="compare">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 compare-title">
+                    <h2>Почему у нас учить Английский выгодно!</h2>
+                </div>
+                <div class="col-12 compare-range">
+
+                    <div id="started">
+                        <label for="start" class="compare-range__levelm">Текущий уровень</label>
+                        <div class="compare-range__level">
+                            <div class="level">Текущий уровень</div>
+                            <div class="beginner change_range" data-level="0">Beginner</div>
+                            <div class="elementary change_range" data-level="1">Elementary</div>
+                            <div class="pre change_range" data-level="2">Pre-Intermediate</div>
+                            <div class="intermediate change_range" data-level="3">Intermediate</div>
+                            <div class="upper change_range" data-level="4">Upper Intermediate</div>
+                            <div class="advanced change_range" data-level="5">Advanced</div>
+                        </div>
+                        <input class="range" type="range" id="start" name="start" min="0" max="5" value="0">
+
+                    </div>
+
+                    <div id="ended">
+                        <label for="end" class="compare-range__levelm">Желаемый уровень</label>
+                        <div class="compare-range__level compare-range__level_two">
+                            <div class="level">Желаемый уровень</div>
+                            <div class="beginner_two change_range" data-level="0">Beginner</div>
+                            <div class="elementary change_range" data-level="1">Elementary</div>
+                            <div class="pre change_range" data-level="2">Pre-Intermediate</div>
+                            <div class="intermediate change_range" data-level="3">Intermediate</div>
+                            <div class="upper change_range" data-level="4">Upper Intermediate</div>
+                            <div class="advanced change_range" data-level="5">Advanced</div>
+                        </div>
+                        <input class="range" type="range" id="end" name="end" min="0" max="5" value="2" step="1">
+
+                    </div>
+
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="compare-result">
+                            <div class="compare-result__this">
+                                <div class="compare-result__title">
+                                    <h3>Школа</h3>
+                                </div>
+                                <div class="compare-result__info">
+                                    <div class="compare-result__dayblock">
+                                        <div class="compare-result__big day_this">1 месяц</div>
+                                        <div class="compare-result__small">Затратите</div>
+                                    </div>
+                                    <div class="compare-result__money">
+                                        <div class="compare-result__big money_this">12500 руб.</div>
+                                        <div class="compare-result__small">Вложения</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare-result__other">
+                                <div class="compare-result__title">
+                                    <h3>Другие школы</h3>
+                                </div>
+                                <div class="compare-result__info">
+                                    <div class="compare-result__dayblock">
+                                        <div class="compare-result__big day_other">4 месяца</div>
+                                        <div class="compare-result__small">Затратите</div>
+                                    </div>
+                                    <div class="compare-result__money">
+                                        <div class="compare-result__big money_other">30000 руб.</div>
+                                        <div class="compare-result__small">Вложения</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
